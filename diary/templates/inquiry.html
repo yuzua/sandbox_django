@@ -1,11 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    これはお問合せです
-</body>
-</html>
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}お問い合せ | Private Diary{% endblock %}
+
+{% block contents %}
+  <div class="container">
+    <form method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+            {{ field }}
+        {% endfor %}
+        <button type="submit">送信</button>
+    </form>
+  </div>
+{% endblock %}
