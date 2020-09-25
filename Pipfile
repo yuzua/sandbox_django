@@ -10,4 +10,4 @@ django = "==3.1"
 django-allauth = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.7.6"
