@@ -39,10 +39,18 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'diary.apps.DiaryConfig',
     'accounts.apps.AccountsConfig',
+<<<<<<< HEAD
 
     'django.contrib.sites',
     'allauth',
     'allauth.account'
+=======
+    
+    
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+>>>>>>> sss/mybranch0925
 ]
 
 MIDDLEWARE = [
@@ -143,27 +151,28 @@ MESSAGE_TAGS = {
     messages.INFO: 'alert alert-info',
 }
 
-#ユーザー認証の設定
+#ユーザ認証の設定
 AUTH_USER_MODEL = 'accounts.CustomUser'
 
 SITE_ID = 1
 
 #認証方法を複数使用
 AUTHENTICATION_BACKENDS = (
-    #一般ユーザー用(メールアドレス認証)
-    'allauth.accounts.auth_backends.AuthenticationBackend',
-    #管理サイト用(ユーザー名認証)
+    #一般ユーザー用（メールアドレス認証）
+    'allauth.account.auth_backends.AuthenticationBackend',
+    #管理者サイト用（ユーザー名認証）
     'django.contrib.auth.backends.ModelBackend',
 )
-
 
 #メールアドレス認証に変更する設定
 ACCOUNT_AUTHENTICATION_METHOD = 'email'
 ACCOUNT_USERNAME_REQUIRED = False
 
-#サインアップ時にメールアドレス確認を挟む設定
-ACCOUNT_EMAIL_VERFICATION = 'mandatory'
-ACCOUNT_EMAIL_REQUIRD = True
+#サインアップ時にメールアドレス確認を挟む設定（二段階認証）
+ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
+ACCOUNT_EMAIL_REQUIRED = True
 
+#ログイン/ログアウト時の遷移先設定
 LOGIN_REDIRECT_URL = 'diary:index'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
+
