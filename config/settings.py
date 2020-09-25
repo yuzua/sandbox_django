@@ -39,18 +39,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'diary.apps.DiaryConfig',
     'accounts.apps.AccountsConfig',
-<<<<<<< HEAD
-
-    'django.contrib.sites',
-    'allauth',
-    'allauth.account'
-=======
     
     
     'django.contrib.sites',
     'allauth',
     'allauth.account',
->>>>>>> sss/mybranch0925
 ]
 
 MIDDLEWARE = [
