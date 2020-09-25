@@ -126,5 +126,19 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
+<<<<<<< HEAD
 #開発環境では、メールのシステムをスタブ化する
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+=======
+#開発環境では、メールのシステムをスタブ化
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
+#Bootstrapの配色設定
+from django.contrib.messages import constants as messages
+MESSAGE_TAGS = {
+    messages.ERROR: 'alert alert-danger',
+    messages.WARNING: 'alert alert-warning',
+    messages.SUCCESS: 'alert alert-success',
+    messages.INFO: 'alert alert-info',
+}
+>>>>>>> master
