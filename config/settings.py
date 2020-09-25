@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'diary.apps.DiaryConfig',
+    'accounts.apps.AccountsConfig'
 ]
 
 MIDDLEWARE = [
@@ -126,10 +127,6 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
 
-<<<<<<< HEAD
-#開発環境では、メールのシステムをスタブ化する
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-=======
 #開発環境では、メールのシステムをスタブ化
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
@@ -141,4 +138,6 @@ MESSAGE_TAGS = {
     messages.SUCCESS: 'alert alert-success',
     messages.INFO: 'alert alert-info',
 }
->>>>>>> master
+
+#ユーザー認証の設定
+AUTH_USER_MODEL = 'accounts.CustomUser'
