@@ -127,9 +127,9 @@ STATIC_URL = '/static/'
 
 #プロジェクトルートのstaticフォルダを追加
 import os
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+#STATICFILES_DIRS = (
+#    os.path.join(BASE_DIR, 'static'),
+#)
 
 #開発環境では、メールのシステムをスタブ化
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
@@ -169,5 +169,4 @@ ACCOUNT_EMAIL_REQUIRED = True
 LOGIN_REDIRECT_URL = 'diary:index'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
-
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
