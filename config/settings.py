@@ -38,15 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'diary.apps.DiaryConfig',
-<<<<<<< HEAD
-    'accounts.apps.AccountsConfig'
-=======
     'accounts.apps.AccountsConfig',
 
     'django.contrib.sites',
     'allauth',
     'allauth.account',
->>>>>>> upstream/CRUDbuild
 ]
 
 MIDDLEWARE = [
@@ -149,8 +145,6 @@ MESSAGE_TAGS = {
 
 #ユーザー認証の設定
 AUTH_USER_MODEL = 'accounts.CustomUser'
-<<<<<<< HEAD
-=======
 
 # django-allauthで利用するdjango.contrib.sitesを使うためにサイト識別用IDを設定
 SITE_ID = 1
@@ -178,4 +172,3 @@ ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 #メディアファイルを扱えるようにする
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
->>>>>>> upstream/CRUDbuild
