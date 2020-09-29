@@ -38,15 +38,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'diary.apps.DiaryConfig',
-<<<<<<< HEAD
-    'accounts.apps.AccountsConfig'
-=======
     'accounts.apps.AccountsConfig',
 
     'django.contrib.sites',
     'allauth',
     'allauth.account',
->>>>>>> upstream/master
 ]
 
 MIDDLEWARE = [
@@ -137,8 +133,6 @@ STATICFILES_DIRS = (
 
 #開発環境では、メールのシステムをスタブ化する
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-<<<<<<< HEAD
-=======
 
 #Bootstrapの配色設定
 from django.contrib.messages import constants as messages
@@ -177,4 +171,3 @@ ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 
 
->>>>>>> upstream/master
