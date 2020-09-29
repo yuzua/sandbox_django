@@ -175,3 +175,7 @@ LOGIN_REDIRECT_URL = 'diary:index'
 ACCOUNT_LOGOUT_REDIRECT_URL = 'account_login'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
