@@ -8,6 +8,10 @@ verify_ssl = true
 [packages]
 django = "==3.1"
 django-allauth = "*"
+pillow = "*"
+django-heroku = "*"
+dj-database-url = "*"
+psycopg2 = "*"
 
 [requires]
 python_version = "3.7"
